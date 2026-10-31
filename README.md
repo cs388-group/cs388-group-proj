@@ -39,6 +39,8 @@ ____ Required Features ____
 *	Allow users to select a bill to view more info.
 *	Display its description, current legislative status, and relevant dates.
 *	Include a link to the original government source.
+*	Name of legislators of who passed and rejected bill
+  
 5.	^^Maybe^^ Bill Search engine
 *	Allow users to search for specific bills
 *	Filter bills by topic, location, and legislative status
