@@ -101,8 +101,8 @@ _Alerts Screen
 
 
 --things to do--
-get a name
-make wire frame
-start building homepage
-get more api keys
+*get aN APP name
+*make wire frame
+*start building homepage
+*get more api keys (IF NEEDED)
 
