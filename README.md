@@ -1,5 +1,11 @@
 # cs388-group-proj
 
+## MVP wireframe
+
+The current MVP flow covers location setup (ZIP code or current location), interest selection, a bill feed, bill details, and settings. The map previews the selected district.
+
+![MVP app wireframe](wireframe-mvp.png)
+
 Political news can be heavily influenced by the perspectives and biases of the media outlets. If people had a simple way to access proposed bills, legislative updates, and exactly who voted for what, misleading narratives would become much harder to sustain. This app aims to put the information directly in people's hands so they can research the facts and draw their own conclusions regardless of the lies politicians assert.
 ___ Description ___
 ____addname here___ is a mobile application that helps people stay informed about political decisions and legislation happening in their communities. The app uses a user's location to identify relevant local, state, and federal representatives and legislation.
