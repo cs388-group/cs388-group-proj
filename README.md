@@ -1,8 +1,6 @@
 # cs388-group-proj
 
-## MVP wireframe
-
-The current MVP flow covers location setup (ZIP code or current location), interest selection, a bill feed, bill details, and settings. The map previews the selected district.
+## Wireframe
 
 ![MVP app wireframe](wireframe-mvp.png)
 
