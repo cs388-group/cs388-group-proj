@@ -25,11 +25,11 @@ The initial version will focus on location selection, retrieving legislation fro
 
 ____ Required Features ____
 1.	User Location Selection
-*Allow users to select their state or enter their ZIP code.
+*Allow users to select state(s) or enter ZIP code(s) of locations they are interested in the politics of or just allow the app to use the user's location.
 *Use their location to determine which political region and legislation are relevant.
 *Allow users to change their location manually.
 2.	Personalized Political Interests
-*Allow users to select topics they care about, examples: datacenters, education, healthcare, housing, taxes, transportation, environment,construction.
+*Allow users to select topics they care about; examples: data centers, education, healthcare, housing, taxes, transportation, environment, construction.
 *	Use selected interests to prioritize relevant bills in their feed.
 3.	Political stream
 *Display a list of proposed bills and legislation.
@@ -39,7 +39,7 @@ ____ Required Features ____
 *	Allow users to select a bill to view more info.
 *	Display its description, current legislative status, and relevant dates.
 *	Include a link to the original government source.
-*	Name of legislators of who passed and rejected bill
+*	Names of legislators who passed and rejected the bill
   
 5.	^^Maybe^^ Bill Search engine
 *	Allow users to search for specific bills
@@ -62,7 +62,7 @@ _Bill Details Screen
 *	Allow users to save or share a bill.
 *	Link to the official government source.
 
-_alert Screen
+_ Alert Screen
 *	Display notifications about legislation users follow.
 *	Show updates when bills are introduced, voted on, or passed.
 *	Allow users to open the associated bill.
@@ -81,7 +81,7 @@ Tab Navigation (Tab to Screen)
 * Alerts → View political notifications.
 * Profile → Manage account, interests, location, and saved bills.
   
-_Flow Navigation (Screen to Screen)
+_Flow Navigation (Screen-to-Screen)
 
 _Home Screen
 *Select a bill → Bill Details Screen.
@@ -100,11 +100,4 @@ _Alerts Screen
 *	Manage notifications → Notification Settings.
 * Select saved bill → Bill Details Screen.
 
-
-
---things to do--
-*get aN APP name
-*make wire frame
-*start building homepage
-*get more api keys (IF NEEDED)
 
