@@ -2,7 +2,7 @@
 
 ## Wireframe
 
-![MVP app wireframe](wireframe-mvp.png)
+![MVP app wireframe](wireframe.png)
 
 Political news can be heavily influenced by the perspectives and biases of the media outlets. If people had a simple way to access proposed bills, legislative updates, and exactly who voted for what, misleading narratives would become much harder to sustain. This app aims to put the information directly in people's hands so they can research the facts and draw their own conclusions regardless of the lies politicians assert.
 ___ Description ___
