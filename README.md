@@ -6,7 +6,7 @@
 
 Political news can be heavily influenced by the perspectives and biases of the media outlets. If people had a simple way to access proposed bills, legislative updates, and exactly who voted for what, misleading narratives would become much harder to sustain. This app aims to put the information directly in people's hands so they can research the facts and draw their own conclusions regardless of the lies politicians assert.
 ___ Description ___
-____addname here___ is a mobile application that helps people stay informed about political decisions and legislation happening in their communities. The app uses a user's location to identify relevant local, state, and federal representatives and legislation.
+___Legisly___ is a mobile application that helps people stay informed about political decisions and legislation happening in their communities. The app uses a user's location to identify relevant local, state, and federal representatives and legislation.
 Users can personalize their political feed by selecting topics they care about, such as education, healthcare, housing, taxes, transportation, and the environment. Instead of searching through complicated government websites, users can see bills they find interesting, understand what they propose in simple language, and follow their progress.
 The app also takes advantage of mobile features such as location services, and push notifications. For example, users can receive an alert when a bill related to one of their interests is introduced, voted on, or passed.
 The overall goal is to make government information easier to access and understand while encouraging people to become more involved in their local communities.
