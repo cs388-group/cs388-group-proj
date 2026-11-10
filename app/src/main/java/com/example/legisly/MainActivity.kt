@@ -9,7 +9,7 @@ import com.example.legisly.databinding.ActivityMainBinding
 
 /**
  * The one Activity that hosts all Legisly onboarding Fragments.
- * here Navigation between screens is defined in res/navigation/nav_graph.xml.
+ * heree Navigation between screens is defined in res/navigation/nav_graph.xml.
  */
 class MainActivity : AppCompatActivity() {
 
