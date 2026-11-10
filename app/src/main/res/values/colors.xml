@@ -1,0 +1,10 @@
+<resources>
+    <color name="navy">#172F50</color>
+    <color name="accent">#B94C55</color>
+    <color name="screen_background">#F5F7FA</color>
+    <color name="body_text">#536174</color>
+    <color name="muted_text">#8994A3</color>
+    <color name="card_border">#E1E6ED</color>
+    <color name="white">#FFFFFF</color>
+    <color name="selection_fill">#E7EEF7</color>
+</resources>

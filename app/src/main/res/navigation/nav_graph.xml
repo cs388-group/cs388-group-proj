@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/welcomeFragment">
+
+    <fragment
+        android:id="@+id/welcomeFragment"
+        android:name="com.example.legisly.ui.WelcomeFragment"
+        android:label="Welcome">
+        <action
+            android:id="@+id/action_welcome_to_location"
+            app:destination="@id/locationFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/locationFragment"
+        android:name="com.example.legisly.ui.LocationFragment"
+        android:label="Your location">
+        <action
+            android:id="@+id/action_location_to_interests"
+            app:destination="@id/interestsFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/interestsFragment"
+        android:name="com.example.legisly.ui.InterestsFragment"
+        android:label="Your interests">
+        <action
+            android:id="@+id/action_interests_to_complete"
+            app:destination="@id/completionFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/completionFragment"
+        android:name="com.example.legisly.ui.CompletionFragment"
+        android:label="Setup complete" />
+</navigation>
