@@ -1,0 +1,38 @@
+[
+    {
+        "merged": "com.example.legisly.app-debug-49:/layout_fragment_location.xml.flat",
+        "source": "com.example.legisly.app-main-51:/layout/fragment_location.xml"
+    },
+    {
+        "merged": "com.example.legisly.app-debug-49:/layout_fragment_completion.xml.flat",
+        "source": "com.example.legisly.app-main-51:/layout/fragment_completion.xml"
+    },
+    {
+        "merged": "com.example.legisly.app-debug-49:/layout_fragment_interests.xml.flat",
+        "source": "com.example.legisly.app-main-51:/layout/fragment_interests.xml"
+    },
+    {
+        "merged": "com.example.legisly.app-debug-49:/layout_item_interest.xml.flat",
+        "source": "com.example.legisly.app-main-51:/layout/item_interest.xml"
+    },
+    {
+        "merged": "com.example.legisly.app-debug-49:/drawable_bg_selection_circle.xml.flat",
+        "source": "com.example.legisly.app-main-51:/drawable/bg_selection_circle.xml"
+    },
+    {
+        "merged": "com.example.legisly.app-debug-49:/layout_activity_main.xml.flat",
+        "source": "com.example.legisly.app-main-51:/layout/activity_main.xml"
+    },
+    {
+        "merged": "com.example.legisly.app-debug-49:/layout_fragment_welcome.xml.flat",
+        "source": "com.example.legisly.app-main-51:/layout/fragment_welcome.xml"
+    },
+    {
+        "merged": "com.example.legisly.app-debug-49:/drawable_bg_logo.xml.flat",
+        "source": "com.example.legisly.app-main-51:/drawable/bg_logo.xml"
+    },
+    {
+        "merged": "com.example.legisly.app-debug-49:/drawable_bg_map_preview.xml.flat",
+        "source": "com.example.legisly.app-main-51:/drawable/bg_map_preview.xml"
+    }
+]
