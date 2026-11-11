@@ -138,4 +138,12 @@ Issues planned for next sprint (Sprint 2):
 
 ### Build progress
 
+###Sprint 1 Recording
+
+
+
+https://github.com/user-attachments/assets/542cc8ae-0640-43a9-a5ff-4d15f21e1882
+
+
+
 ![GIF of current build progress](milestone2-demo.gif)
