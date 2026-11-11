@@ -105,3 +105,37 @@ _Alerts Screen
 * Select saved bill → Bill Details Screen.
 
 
+
+## Milestone 2 - Build Sprint 1 (Unit 8)
+
+### GitHub Project board
+
+![Project board with all three sprint milestones](milestone2-board.png)
+
+### Issue cards
+
+Issues worked on this sprint:
+
+![Issue cards for Sprint 1](milestone2-cards-sprint1.png)
+
+Issues planned for next sprint (Sprint 2):
+
+![Issue cards for Sprint 2 with owners](milestone2-cards-sprint2.png)
+
+### Issues completed this sprint
+
+- #3 Make shell for the welcome page of our app
+- #6 Make shell for the location input page of our app
+- #7 Make shell for the user customization page of our app
+
+### User stories completed
+
+- [x] User location selection (screen shell built)
+- [x] Personalized political interests (screen shell built)
+- [ ] Political stream (bill feed)
+- [ ] Bill details screen
+- [ ] Bill search
+
+### Build progress
+
+![GIF of current build progress](milestone2-demo.gif)
