@@ -1,5 +1,6 @@
 
 import requests
+NY_API = jlAE0PN3eZm8JamEUdBSrslfK68bXn2z
 
 # ==========================================================
 # CONFIGURATION
@@ -213,9 +214,9 @@ def get_bill_details(bill_id):
     # Display committees
     print("\n--- COMMITTEES ---")
 
-    for committee in bill.get("committee", []):
+    #for committee in bill.get("committee", []):
 
-        print("Committee:", committee.get("name"))
+        #print("Committee:", committee.get("name"))
 
 
 
