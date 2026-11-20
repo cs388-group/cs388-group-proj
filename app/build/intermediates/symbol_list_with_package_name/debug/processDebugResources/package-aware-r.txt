@@ -3770,6 +3770,7 @@ id action_context_bar
 id action_divider
 id action_image
 id action_interests_to_complete
+id action_locationFragment_to_billsFragment
 id action_location_to_interests
 id action_menu_divider
 id action_menu_presenter
@@ -3811,6 +3812,12 @@ id beginOnFirstDraw
 id beginning
 id below
 id bestChoice
+id billActionDate
+id billLastAction
+id billNumber
+id billTitle
+id billsFragment
+id billsRecyclerView
 id blocking
 id bottom
 id bounce
@@ -4100,12 +4107,14 @@ id pooling_container_listener_holder_tag
 id position
 id postLayout
 id pressed
+id progressBar
 id progress_circular
 id progress_horizontal
 id radio
 id ratio
 id rectangles
 id report_drawn
+id resultsSubtitle
 id retreat
 id reverseSawtooth
 id right
@@ -4140,6 +4149,7 @@ id selected
 id selectedCountText
 id selectedIcon
 id selection_type
+id sessionTitle
 id sharedValueSet
 id sharedValueUnset
 id shortcut
@@ -4177,6 +4187,7 @@ id startVertical
 id start_center
 id staticLayout
 id staticPostLayout
+id statusText
 id stop
 id stretch
 id submenuarrow
@@ -4398,12 +4409,14 @@ layout design_navigation_menu
 layout design_navigation_menu_item
 layout design_text_input_end_icon
 layout design_text_input_start_icon
+layout fragment_bills
 layout fragment_completion
 layout fragment_interests
 layout fragment_location
 layout fragment_welcome
 layout ime_base_split_test_activity
 layout ime_secondary_split_test_activity
+layout item_bill
 layout item_interest
 layout m3_alert_dialog
 layout m3_alert_dialog_actions

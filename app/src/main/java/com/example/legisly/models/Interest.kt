@@ -1,11 +1,12 @@
+
 package com.example.legisly.models
 
 /**
- * Represents one topic that a CivicPulse user can follow.
+ * Represents a legislative topic a LEG ISLY user can follow.
  *
- * id is a stable key for saving preferences.
- * title is the label displayed in the app.
- * description gives the user a little more context.
+ * id is the stable key used to save preferences.
+ * title is the name displayed in the app.
+ * description briefly explains the topic.
  */
 data class Interest(
     val id: String,

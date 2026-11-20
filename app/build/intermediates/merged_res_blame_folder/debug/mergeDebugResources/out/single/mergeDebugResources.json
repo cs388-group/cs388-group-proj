@@ -12,12 +12,20 @@
         "source": "com.example.legisly.app-main-51:/layout/fragment_interests.xml"
     },
     {
+        "merged": "com.example.legisly.app-debug-49:/layout_item_bill.xml.flat",
+        "source": "com.example.legisly.app-main-51:/layout/item_bill.xml"
+    },
+    {
         "merged": "com.example.legisly.app-debug-49:/layout_item_interest.xml.flat",
         "source": "com.example.legisly.app-main-51:/layout/item_interest.xml"
     },
     {
         "merged": "com.example.legisly.app-debug-49:/drawable_bg_selection_circle.xml.flat",
         "source": "com.example.legisly.app-main-51:/drawable/bg_selection_circle.xml"
+    },
+    {
+        "merged": "com.example.legisly.app-debug-49:/layout_fragment_bills.xml.flat",
+        "source": "com.example.legisly.app-main-51:/layout/fragment_bills.xml"
     },
     {
         "merged": "com.example.legisly.app-debug-49:/layout_activity_main.xml.flat",

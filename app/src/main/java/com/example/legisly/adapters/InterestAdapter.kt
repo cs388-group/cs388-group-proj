@@ -1,3 +1,4 @@
+
 package com.example.legisly.adapters
 
 import android.view.LayoutInflater
@@ -7,10 +8,8 @@ import com.example.legisly.databinding.ItemInterestBinding
 import com.example.legisly.models.Interest
 
 /**
- * RecyclerView adapter for topics.
- *
- * The Fragment owns the list of selected interests. The adapter reports
- * clicks through onInterestToggled instead of saving preferences itself.
+ * RecyclerView adapter for legislative topics.
+ * The Fragment owns the selected interests and saves preferences.
  */
 class InterestAdapter(
     private val interests: MutableList<Interest>,
@@ -24,18 +23,27 @@ class InterestAdapter(
         fun bind(interest: Interest) {
             binding.interestTitle.text = interest.title
             binding.interestDescription.text = interest.description
-            binding.selectedIcon.text = if (interest.isSelected) "✓" else ""
+            binding.selectedIcon.text =
+                if (interest.isSelected) "✓" else ""
+
             binding.interestCard.isChecked = interest.isSelected
 
             binding.interestCard.setOnClickListener {
-                interest.isSelected = !interest.isSelected
-                notifyItemChanged(bindingAdapterPosition)
-                onInterestToggled(interest)
+                val position = bindingAdapterPosition
+
+                if (position != RecyclerView.NO_POSITION) {
+                    interest.isSelected = !interest.isSelected
+                    notifyItemChanged(position)
+                    onInterestToggled(interest)
+                }
             }
         }
     }
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): InterestViewHolder {
+    override fun onCreateViewHolder(
+        parent: ViewGroup,
+        viewType: Int
+    ): InterestViewHolder {
         val binding = ItemInterestBinding.inflate(
             LayoutInflater.from(parent.context),
             parent,
@@ -44,13 +52,19 @@ class InterestAdapter(
         return InterestViewHolder(binding)
     }
 
-    override fun onBindViewHolder(holder: InterestViewHolder, position: Int) {
+    override fun onBindViewHolder(
+        holder: InterestViewHolder,
+        position: Int
+    ) {
         holder.bind(interests[position])
     }
 
     override fun getItemCount(): Int = interests.size
 
     fun getSelectedInterestIds(): Set<String> {
-        return interests.filter { it.isSelected }.map { it.id }.toSet()
+        return interests
+            .filter { it.isSelected }
+            .map { it.id }
+            .toSet()
     }
 }

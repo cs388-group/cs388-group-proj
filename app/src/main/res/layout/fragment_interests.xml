@@ -34,10 +34,16 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="28dp"
-        android:text="Filter your Topics"
+        android:text="Choose your interests"
         android:textColor="@color/navy"
         android:textSize="29sp" />
-
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Select topics to personalize your New Jersey bill feed."
+        android:textColor="@color/muted_text"
+        android:textSize="13sp" />
 
 
     <TextView

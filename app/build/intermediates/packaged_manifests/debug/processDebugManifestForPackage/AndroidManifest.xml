@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.civicpulse"
+    package="com.example.legisly"
     android:versionCode="1"
     android:versionName="1.0" >
 
@@ -8,11 +8,14 @@
         android:minSdkVersion="26"
         android:targetSdkVersion="36" />
 
+    <!-- Allows the app to connect to LegiScan and other APIs -->
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <permission
-        android:name="com.example.civicpulse.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+        android:name="com.example.legisly.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
         android:protectionLevel="signature" />
 
-    <uses-permission android:name="com.example.civicpulse.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+    <uses-permission android:name="com.example.legisly.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
 
     <application
         android:allowBackup="true"
@@ -21,7 +24,6 @@
         android:extractNativeLibs="false"
         android:label="@string/app_name"
         android:supportsRtl="true"
-        android:testOnly="true"
         android:theme="@style/Theme.Legisly" >
         <activity
             android:name="com.example.legisly.MainActivity"
@@ -35,7 +37,7 @@
 
         <provider
             android:name="androidx.startup.InitializationProvider"
-            android:authorities="com.example.civicpulse.androidx-startup"
+            android:authorities="com.example.legisly.androidx-startup"
             android:exported="false" >
             <meta-data
                 android:name="androidx.emoji2.text.EmojiCompatInitializer"

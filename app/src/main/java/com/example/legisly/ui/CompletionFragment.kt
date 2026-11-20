@@ -1,3 +1,4 @@
+
 package com.example.legisly.ui
 
 import android.os.Bundle
@@ -25,13 +26,29 @@ class CompletionFragment : Fragment() {
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
         val preferences = UserPreferences(requireContext())
         val topics = preferences.getInterests().sorted().joinToString(", ")
 
         binding.summaryText.text =
             "Location: ${preferences.getRegionName()} (${preferences.getZipCode()})\n\n" +
-            "Your selected topics: $topics"
+                    "Your selected topics: $topics"
 
+        // Navigate to the legislative bill feed
+        binding.viewBillsButton.setOnClickListener {
+
+            val bundle = Bundle().apply {
+                putString("zipCode", preferences.getZipCode())
+            }
+
+            findNavController().navigate(
+                R.id.action_completion_to_billsFragment,
+                bundle
+            )
+        }
+
+        // Return to the welcome screen
         binding.backToStartButton.setOnClickListener {
             findNavController().navigate(
                 R.id.welcomeFragment,
