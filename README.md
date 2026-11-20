@@ -1,6 +1,6 @@
-# cs388-group-proj
+# cs388-group-project
 
-## The Wireframe
+## The Wireframe of Our Project
 
 ![MVP app wireframe](wireframe.png)
 
