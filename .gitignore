@@ -1,0 +1,12 @@
+# Local Android configuration
+local.properties
+
+# Gradle cache
+.gradle/
+
+# Build output
+build/
+*/build/
+
+# Android Studio local files
+.idea/
