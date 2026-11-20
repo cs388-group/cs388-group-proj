@@ -41,6 +41,30 @@ class LocationFragment : Fragment() {
                 Toast.LENGTH_LONG
             ).show()
         }
+        binding.continueButton.setOnClickListener {
+
+            val zipCode = binding.zipCodeInput.text
+                ?.toString()
+                ?.trim()
+                .orEmpty()
+
+            if (!zipCode.matches(Regex("\\d{5}"))) {
+                binding.zipCodeInputLayout.error =
+                    "Enter a valid 5-digit ZIP code"
+                return@setOnClickListener
+            }
+
+            binding.zipCodeInputLayout.error = null
+
+            val bundle = Bundle().apply {
+                putString("zipCode", zipCode)
+            }
+
+            findNavController().navigate(
+                R.id.action_locationFragment_to_billsFragment,
+                bundle
+            )
+        }
 
         binding.continueButton.setOnClickListener {
             val zip = binding.zipCodeInput.text?.toString()?.trim().orEmpty()
