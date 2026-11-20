@@ -1,0 +1,262 @@
+
+import requests
+NY_API = jlAE0PN3eZm8JamEUdBSrslfK68bXn2z
+
+# ==========================================================
+# CONFIGURATION
+# ==========================================================
+
+# Insert your LegiScan API key when ready.
+LEGISCAN_API_KEY = "0b942ddec2236bdc7c382cae239f42de"
+
+# WhoIsMyRepresentative does not require an API key.
+WHO_IS_MY_REP_URL = "https://whoismyrepresentative.com/getall_mems.php"
+
+# LegiScan API endpoint.
+LEGISCAN_URL = "https://api.legiscan.com/"
+
+
+# ==========================================================
+# FUNCTION 1: GET FEDERAL REPRESENTATIVES
+# ==========================================================
+
+def get_representatives(zip_code):
+
+    # Send the ZIP code to WhoIsMyRepresentative.
+    params = {
+        "zip": zip_code,
+        "output": "json"
+    }
+
+    response = requests.get(WHO_IS_MY_REP_URL, params=params)
+    response.raise_for_status()
+
+    data = response.json()
+
+    # Extract the representatives.
+    representatives = data.get("results", [])
+
+    return representatives
+
+
+# ==========================================================
+# FUNCTION 2: DISPLAY REPRESENTATIVES
+# ==========================================================
+
+def display_representatives(representatives):
+
+    print("\n========== YOUR FEDERAL REPRESENTATIVES ==========")
+
+    # Store the state abbreviation for LegiScan.
+    state_code = None
+
+    for person in representatives:
+
+        name = person.get("name", "Unknown")
+        state = person.get("state", "Unknown")
+        district = person.get("district", "N/A")
+
+        state_code = state
+
+        print("\nName:", name)
+        print("State:", state)
+        print("District:", district)
+
+    return state_code
+
+
+# ==========================================================
+# FUNCTION 3: GENERIC LEGISCAN REQUEST
+# ==========================================================
+
+def legiscan_request(operation, **extra_params):
+
+    # Every LegiScan request needs an API key and operation.
+    params = {
+        "key": LEGISCAN_API_KEY,
+        "op": operation,
+        **extra_params
+    }
+
+    response = requests.get(LEGISCAN_URL, params=params)
+    response.raise_for_status()
+
+    data = response.json()
+
+    # Check whether LegiScan successfully processed the request.
+    if data.get("status") != "OK":
+        print("LegiScan error:", data)
+        return None
+
+    # IMPORTANT:
+    # Return the COMPLETE response.
+    # getSessionList returns "sessions" directly.
+    # getMasterList returns "masterlist" directly.
+    return data
+
+
+# ==========================================================
+# FUNCTION 4: GET LATEST STATE LEGISLATIVE SESSION
+# ==========================================================
+
+def get_latest_session(state_code):
+
+    print(f"\nLooking up legislative sessions for {state_code}...")
+
+    # Request all legislative sessions for the state.
+    data = legiscan_request(
+        "getSessionList",
+        state=state_code
+    )
+
+    if not data:
+        return None
+
+    # Extract sessions from the API response.
+    sessions = data.get("sessions", [])
+
+    # Select regular sessions instead of special sessions.
+    regular_sessions = [
+        session for session in sessions
+        if not session.get("special", 0)
+    ]
+
+    if not regular_sessions:
+        regular_sessions = sessions
+
+    if not regular_sessions:
+        print("No sessions found.")
+        return None
+
+    # Select the session with the latest ending year.
+    latest_session = max(
+        regular_sessions,
+        key=lambda session: session.get("year_end", 0)
+    )
+
+    print("\nLatest session:", latest_session.get("session_name"))
+    print("Session ID:", latest_session.get("session_id"))
+
+    # Return the session ID for the next request.
+    return latest_session.get("session_id")
+
+
+# ==========================================================
+# FUNCTION 5: GET BILLS FROM THE SELECTED SESSION
+# ==========================================================
+
+def get_state_bills(session_id):
+
+    print("\nRetrieving state bills...")
+
+    # Request all bills associated with the session.
+    data = legiscan_request(
+        "getMasterList",
+        id=session_id
+    )
+
+    if not data:
+        return
+
+    # Extract the master list.
+    masterlist = data.get("masterlist", {})
+
+    # The master list contains bill information.
+    # We only want the actual bill records.
+    bills = [
+        bill for bill in masterlist.values()
+        if isinstance(bill, dict) and "bill_id" in bill
+    ]
+
+    # Sort bills by their latest legislative action.
+    bills.sort(
+        key=lambda bill: bill.get("last_action_date") or "",
+        reverse=True
+    )
+
+    print(f"\n========== STATE BILLS ({len(bills)} TOTAL) ==========")
+
+    # Display the first 10 bills.
+    for bill in bills[:10]:
+
+        print("\nBill:", bill.get("number"))
+        print("Title:", bill.get("title"))
+        print("Last Action:", bill.get("last_action_date"))
+        print("Bill ID:", bill.get("bill_id"))
+        get_bill_details(bill.get("bill_id"))
+
+
+# ==========================================================
+# FUNCTION 6: GET BILL DETAILS
+# ==========================================================
+
+def get_bill_details(bill_id):
+
+    # Use the bill ID to retrieve detailed information.
+    data = legiscan_request(
+        "getBill",
+        id=bill_id
+    )
+
+    if not data:
+        return
+
+    bill = data.get("bill", {})
+
+    # Display sponsors
+    print("\n--- SPONSORS ---")
+
+    for sponsor in bill.get("sponsors", []):
+
+        print("Name:", sponsor.get("name"))
+        print("Role:", sponsor.get("role"))
+
+    # Display committees
+    print("\n--- COMMITTEES ---")
+
+    #for committee in bill.get("committee", []):
+
+        #print("Committee:", committee.get("name"))
+
+
+
+# ==========================================================
+# MAIN PROGRAM
+# ==========================================================
+
+def main():
+
+    # STEP 1: Ask for a ZIP code.
+    #STATE_NAME = input("\nEnter your STATE ABBRV: ").strip()
+    zip_code = input("\nEnter your 5-digit ZIP code: ").strip()
+
+    if not zip_code.isdigit() or len(zip_code) != 5:
+        print("Invalid ZIP code.")
+        return
+
+    # STEP 2: Find federal representatives.
+    representatives = get_representatives(zip_code)
+
+    # STEP 3: Display representatives and get their state.
+    state_code = display_representatives(representatives)
+
+    if not state_code:
+        print("Could not determine your state.")
+        return
+
+    # STEP 4: Find the latest legislative session.
+    session_id = get_latest_session(state_code)
+
+    if not session_id:
+        print("Could not retrieve a legislative session.")
+        return
+
+    # STEP 5: Retrieve bills from that session.
+    get_state_bills(session_id)
+
+    print("\nLOOKUP COMPLETE")
+
+
+# Run the program.
+if __name__ == "__main__":
+    main()
