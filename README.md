@@ -27,7 +27,7 @@ The initial version will focus on location selection, retrieving legislation fro
 
 
 
-____ Required Features ____
+____ Required Features ____ :)
 1.	User Location Selection
 *Allow users to select state(s) or enter ZIP code(s) of locations they are interested in the politics of or just allow the app to use the user's location.
 *Use their location to determine which political region and legislation are relevant.
