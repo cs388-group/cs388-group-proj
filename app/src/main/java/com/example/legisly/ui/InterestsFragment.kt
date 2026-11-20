@@ -22,17 +22,18 @@ class InterestsFragment : Fragment() {
     private lateinit var adapter: InterestAdapter
     private lateinit var userPreferences: UserPreferences
 
+
     private val interestList = mutableListOf(
-        Interest("education", "Education", "Schools, colleges and student policy"),
-        Interest("healthcare", "Healthcare", "Hospitals, insurance and public health"),
-        Interest("housing", "Housing", "Rent, development and affordability"),
-        Interest("taxes", "Taxes", "Local, state and federal taxes"),
-        Interest("transportation", "Transportation", "Roads, transit and infrastructure"),
-        Interest("environment", "Environment", "Climate, energy and conservation"),
-        Interest("technology", "Technology", "Privacy, AI and technology policy"),
-        Interest("public_safety", "Public Safety", "Policing, fire and emergency services"),
-        Interest("economy", "Economy", "Jobs, business and cost of living")
+        Interest("healthcare", "Healthcare", "Health services and insurance"),
+        Interest("education", "Education", "Schools and higher education"),
+        Interest("housing", "Housing", "Rent and affordable housing"),
+        Interest("taxes", "Taxes", "State and local taxes"),
+        Interest("transportation", "Transportation", "Roads and public transit"),
+        Interest("environment", "Environment", "Climate and energy"),
+        Interest("public_safety", "Public Safety", "Police and emergency services"),
+        Interest("economy", "Economy", "Jobs and business")
     )
+
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -44,6 +45,8 @@ class InterestsFragment : Fragment() {
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
         userPreferences = UserPreferences(requireContext())
 
         val previouslySelected = userPreferences.getInterests()
@@ -74,7 +77,7 @@ class InterestsFragment : Fragment() {
                 return@setOnClickListener
             }
 
-            userPreferences.saveInterests(selectedIds)
+            userPreferences.saveInterests(selectedIds.toList())
             findNavController().navigate(R.id.action_interests_to_complete)
         }
     }
