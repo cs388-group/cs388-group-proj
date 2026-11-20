@@ -1,25 +1,26 @@
+package com.example.legisly.network
 
-<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+import com.example.legisly.network.congress.CongressApiService
+import com.example.legisly.network.legiscan.LegiScanApiService
+import retrofit2.Retrofit
+import retrofit2.converter.gson.GsonConverterFactory
 
-    <!-- Allows the app to connect to LegiScan and other APIs -->
-    <uses-permission android:name="android.permission.INTERNET" />
+object ApiClient {
 
-    <application
-        android:allowBackup="true"
-        android:label="@string/app_name"
-        android:supportsRtl="true"
-        android:theme="@style/Theme.Legisly">
+    private fun createRetrofit(baseUrl: String): Retrofit {
+        return Retrofit.Builder()
+            .baseUrl(baseUrl)
+            .addConverterFactory(GsonConverterFactory.create())
+            .build()
+    }
 
-        <activity
-            android:name=".MainActivity"
-            android:exported="true">
+    val congressApi: CongressApiService =
+        createRetrofit(
+            "https://whoismyrepresentative.com/"
+        ).create(CongressApiService::class.java)
 
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-
-        </activity>
-    </application>
-
-</manifest>
+    val legiscanApi: LegiScanApiService =
+        createRetrofit(
+            "https://api.legiscan.com/"
+        ).create(LegiScanApiService::class.java)
+}
