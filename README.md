@@ -147,23 +147,30 @@ Issues planned for next sprint (Sprint 2):
 
 ### GitHub Project board
 
-![Project board with all three sprint milestones](milestone2-board.png)
+
+<img width="452" height="390" alt="Screenshot 2026-11-24 161520" src="https://github.com/user-attachments/assets/2774837e-913a-41ac-a668-e5bde77ad683" />
+
 
 ### Issue cards
 
 Issues worked on this sprint:
 
-![Issue cards for Sprint 1](milestone2-cards-sprint1.png)
+
+<img width="726" height="416" alt="Screenshot 2026-11-24 161244" src="https://github.com/user-attachments/assets/968fbb75-4f8b-499e-b73b-a1946c2d0899" />
+
 
 Issues planned for next sprint (Sprint 2):
 
-![Issue cards for Sprint 2 with owners](milestone2-cards-sprint2.png)
+
+<img width="730" height="428" alt="Screenshot 2026-11-24 161300" src="https://github.com/user-attachments/assets/33eb8947-f5cd-486c-bbbd-1fbb3c3a6260" />
+
 
 ### Issues completed this sprint
 
-- #3 Make shell for the welcome page of our app
-- #6 Make shell for the location input page of our app
-- #7 Make shell for the user customization page of our app
+- #4 API needs more suitable APIs
+- #5 Come up with ideas to make the app exclusively mobile
+- #10 Wire up interest selection page
+- #11 Final decision on Legiscan and Data Sources
 
 ### User stories completed
 
