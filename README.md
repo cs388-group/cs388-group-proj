@@ -132,7 +132,7 @@ Issues planned for next sprint (Sprint 2):
 
 - [x] User location selection (screen shell built)
 - [x] Personalized political interests (screen shell built)
-- [ ] Political stream (bill feed)
+- [X] Political stream (bill feed)
 - [ ] Bill details screen
 - [ ] Bill search
 
