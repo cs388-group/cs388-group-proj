@@ -193,3 +193,9 @@ https://github.com/user-attachments/assets/61dd3cbc-d2c1-4a38-b170-5218a8b41099
 
 
 
+
+### Demo Day prep video
+
+Practice run of our Demo Day presentation (2:12):
+
+[▶ Watch the Legisly demo video](milestone3-demo-day-prep.mp4)
