@@ -193,3 +193,11 @@ https://github.com/user-attachments/assets/61dd3cbc-d2c1-4a38-b170-5218a8b41099
 
 
 
+
+### Demo Day prep video
+
+Practice run of our Demo Day presentation (2:12):
+
+[![Legisly demo video](https://img.youtube.com/vi/_bbRiyvh7kA/0.jpg)](https://www.youtube.com/watch?v=_bbRiyvh7kA)
+
+https://www.youtube.com/watch?v=_bbRiyvh7kA
