@@ -2,7 +2,6 @@
 <com.google.android.material.card.MaterialCardView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/interestCard"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_marginBottom="8dp"
@@ -10,46 +9,46 @@
     app:cardCornerRadius="9dp"
     app:cardElevation="0dp"
     app:strokeColor="@color/card_border"
-    app:strokeWidth="1dp"
-    android:clickable="true"
-    android:focusable="true">
+    app:strokeWidth="1dp">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center_vertical"
-        android:orientation="horizontal"
-        android:padding="13dp">
-        <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:orientation="vertical">
-            <TextView
-                android:id="@+id/interestTitle"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Education"
-                android:textColor="@color/navy"
-                android:textSize="14sp"
-                android:textStyle="bold" />
-            <TextView
-                android:id="@+id/interestDescription"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="3dp"
-                android:text="Schools, colleges and student policy"
-                android:textColor="@color/body_text"
-                android:textSize="11sp" />
-        </LinearLayout>
+        android:orientation="vertical"
+        android:padding="16dp">
+
         <TextView
-            android:id="@+id/selectedIcon"
-            android:layout_width="25dp"
-            android:layout_height="25dp"
-            android:gravity="center"
+            android:id="@+id/billNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/accent"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/billTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
             android:textColor="@color/navy"
             android:textSize="15sp"
-            android:textStyle="bold"
-            android:background="@drawable/bg_selection_circle" />
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/billLastAction"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:textColor="@color/body_text"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/billActionDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:textColor="@color/muted_text"
+            android:textSize="11sp" />
+
     </LinearLayout>
 </com.google.android.material.card.MaterialCardView>
