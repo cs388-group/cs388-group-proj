@@ -132,7 +132,7 @@ Issues planned for next sprint (Sprint 2):
 
 - [x] User location selection (screen shell built)
 - [x] Personalized political interests (screen shell built)
-- [X] Political stream (bill feed)
+- [ ] Political stream (bill feed)
 - [ ] Bill details screen
 - [ ] Bill search
 
@@ -142,3 +142,47 @@ Issues planned for next sprint (Sprint 2):
 
 
 ![GIF of current build progress](milestone2-demo.gif)
+
+## Milestone 3 - Build Sprint 2 (Unit 9)
+
+### GitHub Project board
+
+![Project board with all three sprint milestones](milestone2-board.png)
+
+### Issue cards
+
+Issues worked on this sprint:
+
+![Issue cards for Sprint 1](milestone2-cards-sprint1.png)
+
+Issues planned for next sprint (Sprint 2):
+
+![Issue cards for Sprint 2 with owners](milestone2-cards-sprint2.png)
+
+### Issues completed this sprint
+
+- #3 Make shell for the welcome page of our app
+- #6 Make shell for the location input page of our app
+- #7 Make shell for the user customization page of our app
+
+### User stories completed
+
+- [x] User location selection (screen shell built)
+- [x] Personalized political interests (screen shell built)
+- [X] Political stream (bill feed)
+- [ ] Bill details screen
+- [ ] Bill search
+
+### Build progress
+
+###Milestone 3 Recording
+
+
+
+https://github.com/user-attachments/assets/61dd3cbc-d2c1-4a38-b170-5218a8b41099
+
+
+
+
+
+
