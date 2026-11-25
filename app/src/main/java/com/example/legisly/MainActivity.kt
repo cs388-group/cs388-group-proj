@@ -10,6 +10,8 @@ import androidx.navigation.fragment.NavHostFragment
 import com.example.legisly.databinding.ActivityMainBinding
 import com.example.legisly.network.ApiClient
 import kotlinx.coroutines.launch
+import androidx.navigation.ui.setupWithNavController
+
 /**
  * The oone Activity that hosts all Legisly onboarding Fragments.
  * heree Navigation between screens is defined in res/navigation/nav_graph.xml.
@@ -66,6 +68,7 @@ class MainActivity : AppCompatActivity() {
             .findFragmentById(R.id.navHostFragment) as NavHostFragment
         navController = navHost.navController
 
+        binding.bottomNavigation.setupWithNavController(navController)
 
     }
 
