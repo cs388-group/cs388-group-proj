@@ -55,10 +55,7 @@ class HomeFragment : Fragment() {
                 putBoolean("isEditMode", true)
             }
 
-            findNavController().navigate(
-                R.id.action_home_to_location,
-                bundle
-            )
+            findNavController().navigate(R.id.action_completion_to_home)
         }
 
         binding.viewAllBillsButton.setOnClickListener {
