@@ -38,7 +38,7 @@
         android:layout_width="match_parent"
         android:layout_height="54dp"
         android:layout_marginTop="28dp"
-        android:text="Back to welcome"
+        android:text="Back to onboarding"
         android:textAllCaps="false" />
 
     <com.google.android.material.button.MaterialButton
@@ -46,7 +46,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:text="View My Bills"
+        android:text="Home"
         android:textAllCaps="false" />
 
 </LinearLayout>
