@@ -1,20 +1,16 @@
-
 import java.util.Properties
-
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
 }
-
-// Load local.properties from the project root
 val localProperties = Properties()
 val localPropertiesFile = rootProject.file("local.properties")
 
 if (localPropertiesFile.exists()) {
-    localPropertiesFile.inputStream().use {
-        localProperties.load(it)
-    }
+    localPropertiesFile.inputStream().use { localProperties.load(it) }
 }
+
+
 
 android {
     namespace = "com.example.legisly"
@@ -27,34 +23,31 @@ android {
         versionCode = 1
         versionName = "1.0"
 
-        val apiKey = localProperties
-            .getProperty("LEGISCAN_API_KEY", "")
+        val legiscanKey = (localProperties.getProperty("LEGISCAN_API_KEY") ?: localProperties.getProperty("NY_API_KEY") ?: "").trim().removeSurrounding("\"")
+        val nyKey = (localProperties.getProperty("NY_API_KEY") ?: "").trim().removeSurrounding("\"")
 
         buildConfigField(
             "String",
+            "NY_API_KEY",
+            "\"$nyKey\""
+        )
+        buildConfigField(
+            "String",
             "LEGISCAN_API_KEY",
-            "\"${apiKey.replace("\\", "\\\\").replace("\"", "\\\"")}\""
+            "\"$legiscanKey\""
         )
     }
 
     buildFeatures {
-        viewBinding = true
         buildConfig = true
+        viewBinding = true
     }
 
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_17
         targetCompatibility = JavaVersion.VERSION_17
     }
-
-    kotlinOptions {
-        jvmTarget = "17"
-    }
-    buildTypes {
-        getByName("release") {
-            signingConfig = signingConfigs.getByName("debug")
-        }
-    }
+    kotlinOptions { jvmTarget = "17" }
 }
 
 dependencies {
@@ -66,10 +59,9 @@ dependencies {
     implementation("androidx.navigation:navigation-ui-ktx:2.9.5")
     implementation("com.google.android.material:material:1.13.0")
     implementation("androidx.constraintlayout:constraintlayout:2.2.1")
+    implementation("com.squareup.retrofit2:retrofit:2.11.0")
+    implementation("com.squareup.retrofit2:converter-gson:2.11.0")
+    implementation("com.squareup.okhttp3:okhttp:4.12.0")
     implementation("com.google.android.gms:play-services-location:21.3.0")
-    implementation("com.squareup.retrofit2:retrofit:3.0.0")
-    implementation("com.squareup.retrofit2:converter-gson:3.0.0")
-
-    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.10.2")
-    implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.9.4")
+    implementation("com.google.android.gms:play-services-location:21.3.0")
 }
