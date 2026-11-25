@@ -4,9 +4,10 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginBottom="12dp"
-    app:cardCornerRadius="12dp"
-    app:cardElevation="1dp"
+    android:layout_marginBottom="8dp"
+    app:cardBackgroundColor="@color/white"
+    app:cardCornerRadius="9dp"
+    app:cardElevation="0dp"
     app:strokeColor="@color/card_border"
     app:strokeWidth="1dp">
 
@@ -18,29 +19,26 @@
 
         <TextView
             android:id="@+id/billNumber"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="A1234"
-            android:textColor="@color/navy"
-            android:textSize="12sp"
+            android:textColor="@color/accent"
+            android:textSize="14sp"
             android:textStyle="bold" />
 
         <TextView
             android:id="@+id/billTitle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="7dp"
-            android:text="Example legislative bill title"
+            android:layout_marginTop="4dp"
             android:textColor="@color/navy"
-            android:textSize="17sp"
+            android:textSize="15sp"
             android:textStyle="bold" />
 
         <TextView
             android:id="@+id/billLastAction"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:text="Latest action: Referred to committee"
+            android:layout_marginTop="6dp"
             android:textColor="@color/body_text"
             android:textSize="12sp" />
 
@@ -48,11 +46,9 @@
             android:id="@+id/billActionDate"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="4dp"
-            android:text="Date: 2026-01-01"
+            android:layout_marginTop="2dp"
             android:textColor="@color/muted_text"
             android:textSize="11sp" />
 
     </LinearLayout>
-
 </com.google.android.material.card.MaterialCardView>
