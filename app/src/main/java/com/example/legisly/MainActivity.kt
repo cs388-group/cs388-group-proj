@@ -11,7 +11,7 @@ import com.example.legisly.databinding.ActivityMainBinding
 import com.example.legisly.network.ApiClient
 import kotlinx.coroutines.launch
 /**
- * The one Activity that hosts all Legisly onboarding Fragments.
+ * The oone Activity that hosts all Legisly onboarding Fragments.
  * heree Navigation between screens is defined in res/navigation/nav_graph.xml.
  */
 

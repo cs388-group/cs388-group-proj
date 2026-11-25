@@ -43,20 +43,14 @@ class CompletionFragment : Fragment() {
             }
 
             findNavController().navigate(
-                R.id.action_completion_to_billsFragment,
+                R.id.action_completion_to_home,
                 bundle
             )
         }
 
         // Return to the welcome screen
         binding.backToStartButton.setOnClickListener {
-            findNavController().navigate(
-                R.id.welcomeFragment,
-                null,
-                androidx.navigation.NavOptions.Builder()
-                    .setPopUpTo(R.id.welcomeFragment, true)
-                    .build()
-            )
+            findNavController().navigateUp()
         }
     }
 

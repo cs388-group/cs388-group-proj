@@ -1,5 +1,4 @@
 
-
 package com.example.legisly.network.congress
 
 import com.google.gson.JsonObject

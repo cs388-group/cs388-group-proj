@@ -27,7 +27,7 @@ The initial version will focus on location selection, retrieving legislation fro
 
 
 
-____ Required Features ____ :)
+____ Required Features ____
 1.	User Location Selection
 *Allow users to select state(s) or enter ZIP code(s) of locations they are interested in the politics of or just allow the app to use the user's location.
 *Use their location to determine which political region and legislation are relevant.
@@ -142,56 +142,3 @@ Issues planned for next sprint (Sprint 2):
 
 
 ![GIF of current build progress](milestone2-demo.gif)
-
-## Milestone 3 - Build Sprint 2 (Unit 9)
-
-### GitHub Project board
-
-
-<img width="452" height="390" alt="Screenshot 2026-11-24 161520" src="https://github.com/user-attachments/assets/2774837e-913a-41ac-a668-e5bde77ad683" />
-
-
-### Issue cards
-
-Issues worked on this sprint:
-
-
-<img width="726" height="416" alt="Screenshot 2026-11-24 161244" src="https://github.com/user-attachments/assets/968fbb75-4f8b-499e-b73b-a1946c2d0899" />
-
-
-Issues planned for next sprint (Sprint 2):
-
-
-<img width="730" height="428" alt="Screenshot 2026-11-24 161300" src="https://github.com/user-attachments/assets/33eb8947-f5cd-486c-bbbd-1fbb3c3a6260" />
-
-
-### Issues completed this sprint
-
-- #4 API needs more suitable APIs
-- #5 Come up with ideas to make the app exclusively mobile
-- #10 Wire up interest selection page
-- #11 Final decision on Legiscan and Data Sources
-
-### User stories completed
-
-- [x] User location selection (screen shell built)
-- [x] Personalized political interests (screen shell built)
-- [X] Political stream (bill feed)
-- [ ] Bill details screen
-- [ ] Bill search
-
-### Build progress
-
-###Milestone 3 Recording
-
-
-
-https://github.com/user-attachments/assets/61dd3cbc-d2c1-4a38-b170-5218a8b41099
-
-
-
-Demo Prep Video:
-https://www.youtube.com/watch?v=_bbRiyvh7kA
-
-
-

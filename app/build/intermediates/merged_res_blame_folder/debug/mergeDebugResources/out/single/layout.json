@@ -1,0 +1,34 @@
+[
+    {
+        "merged": "com.example.legisly.app-mergeDebugResources-48:/layout/fragment_completion.xml",
+        "source": "com.example.legisly.app-main-51:/layout/fragment_completion.xml"
+    },
+    {
+        "merged": "com.example.legisly.app-mergeDebugResources-48:/layout/item_interest.xml",
+        "source": "com.example.legisly.app-main-51:/layout/item_interest.xml"
+    },
+    {
+        "merged": "com.example.legisly.app-mergeDebugResources-48:/layout/fragment_location.xml",
+        "source": "com.example.legisly.app-main-51:/layout/fragment_location.xml"
+    },
+    {
+        "merged": "com.example.legisly.app-mergeDebugResources-48:/layout/fragment_interests.xml",
+        "source": "com.example.legisly.app-main-51:/layout/fragment_interests.xml"
+    },
+    {
+        "merged": "com.example.legisly.app-mergeDebugResources-48:/layout/activity_main.xml",
+        "source": "com.example.legisly.app-main-51:/layout/activity_main.xml"
+    },
+    {
+        "merged": "com.example.legisly.app-mergeDebugResources-48:/layout/item_bill.xml",
+        "source": "com.example.legisly.app-main-51:/layout/item_bill.xml"
+    },
+    {
+        "merged": "com.example.legisly.app-mergeDebugResources-48:/layout/fragment_bills.xml",
+        "source": "com.example.legisly.app-main-51:/layout/fragment_bills.xml"
+    },
+    {
+        "merged": "com.example.legisly.app-mergeDebugResources-48:/layout/fragment_welcome.xml",
+        "source": "com.example.legisly.app-main-51:/layout/fragment_welcome.xml"
+    }
+]

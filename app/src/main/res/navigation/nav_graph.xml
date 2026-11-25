@@ -4,6 +4,7 @@
     android:id="@+id/nav_graph"
     app:startDestination="@id/welcomeFragment">
 
+    <!-- WELCOME -->
     <fragment
         android:id="@+id/welcomeFragment"
         android:name="com.example.legisly.ui.WelcomeFragment"
@@ -12,52 +13,96 @@
         <action
             android:id="@+id/action_welcome_to_location"
             app:destination="@id/locationFragment" />
+
     </fragment>
 
+    <!-- LOCATION -->
     <fragment
         android:id="@+id/locationFragment"
         android:name="com.example.legisly.ui.LocationFragment"
-        android:label="Your location">
+        android:label="Your Location">
+
+        <argument
+            android:name="isEditMode"
+            app:argType="boolean"
+            android:defaultValue="false" />
 
         <action
             android:id="@+id/action_location_to_interests"
             app:destination="@id/interestsFragment" />
 
-        <action
-            android:id="@+id/action_locationFragment_to_billsFragment"
-            app:destination="@id/billsFragment" />
     </fragment>
 
+    <!-- INTERESTS -->
     <fragment
         android:id="@+id/interestsFragment"
         android:name="com.example.legisly.ui.InterestsFragment"
-        android:label="Your interests">
+        android:label="Your Interests">
 
         <action
             android:id="@+id/action_interests_to_complete"
             app:destination="@id/completionFragment" />
+
     </fragment>
 
+    <!-- ONBOARDING COMPLETE -->
     <fragment
         android:id="@+id/completionFragment"
         android:name="com.example.legisly.ui.CompletionFragment"
-        android:label="Setup complete">
+        android:label="Setup Complete">
 
-        <!-- NEW: Navigate from completed onboarding to the bill feed -->
         <action
-            android:id="@+id/action_completion_to_billsFragment"
-            app:destination="@id/billsFragment" />
+            android:id="@+id/action_completion_to_home"
+            app:destination="@id/homeFragment"
+            app:popUpTo="@id/welcomeFragment"
+            app:popUpToInclusive="true" />
+
     </fragment>
 
+    <!-- HOME -->
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.legisly.ui.HomeFragment"
+        android:label="Home">
+
+        <action
+            android:id="@+id/action_home_to_location"
+            app:destination="@id/locationFragment">
+
+            <argument
+                android:name="isEditMode"
+                app:argType="boolean"
+                android:defaultValue="true" />
+
+        </action>
+
+        <action
+            android:id="@+id/action_home_to_bills"
+            app:destination="@id/billsFragment" />
+
+    </fragment>
+
+    <!-- BILLS -->
     <fragment
         android:id="@+id/billsFragment"
         android:name="com.example.legisly.BillsFragment"
-        android:label="New Jersey Bills">
+        android:label="Bills">
 
         <argument
             android:name="zipCode"
             app:argType="string"
             android:defaultValue="" />
+
+        <action
+            android:id="@+id/action_bills_to_location"
+            app:destination="@id/locationFragment">
+
+            <argument
+                android:name="isEditMode"
+                app:argType="boolean"
+                android:defaultValue="true" />
+
+        </action>
 
     </fragment>
 
